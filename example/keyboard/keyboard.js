@@ -44,8 +44,6 @@ $(document).ready(function($) {
     digitalWrite(16, 0); 
   });
 
-});
-
 // Motor control:
 
 // LEFT
@@ -103,6 +101,9 @@ keyboard.on('K', 'release', function() {
   digitalWrite(9,  1); 
   digitalWrite(10, 1); 
 });
+
+});
+
 
 // to add new keys at runtime:
 // bindKey('Up', 1);
