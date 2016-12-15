@@ -46,6 +46,63 @@ $(document).ready(function($) {
 
 });
 
+// Motor control:
+
+// LEFT
+keyboard.on('J', 'activate', function() {
+  digitalWrite(5,  0); 
+  digitalWrite(7,  1); 
+  digitalWrite(9,  1); 
+  digitalWrite(10, 0); 
+});
+keyboard.on('J', 'release', function() {
+  digitalWrite(5,  1); 
+  digitalWrite(7,  1); 
+  digitalWrite(9,  1); 
+  digitalWrite(10, 1); 
+});
+
+// RIGHT
+keyboard.on('L', 'activate', function() {
+  digitalWrite(5,  1); 
+  digitalWrite(7,  0); 
+  digitalWrite(9,  0); 
+  digitalWrite(10, 1); 
+});
+keyboard.on('L', 'release', function() {
+  digitalWrite(5,  1); 
+  digitalWrite(7,  1); 
+  digitalWrite(9,  1); 
+  digitalWrite(10, 1); 
+});
+
+// FWD
+keyboard.on('I', 'activate', function() {
+  digitalWrite(5,  1); 
+  digitalWrite(7,  0); 
+  digitalWrite(9,  1); 
+  digitalWrite(10, 0); 
+});
+keyboard.on('I', 'release', function() {
+  digitalWrite(5,  1); 
+  digitalWrite(7,  1); 
+  digitalWrite(9,  1); 
+  digitalWrite(10, 1); 
+});
+
+// REV
+keyboard.on('K', 'activate', function() {
+  digitalWrite(5,  0); 
+  digitalWrite(7,  1); 
+  digitalWrite(9,  0); 
+  digitalWrite(10, 1); 
+});
+keyboard.on('K', 'release', function() {
+  digitalWrite(5,  1); 
+  digitalWrite(7,  1); 
+  digitalWrite(9,  1); 
+  digitalWrite(10, 1); 
+});
 
 // to add new keys at runtime:
 // bindKey('Up', 1);
